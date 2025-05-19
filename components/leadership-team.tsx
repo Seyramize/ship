@@ -2,7 +2,7 @@ const teamMembers = [
   {
     name: "Sarah Johnson",
     role: "Chief Executive Officer",
-    bio: "With over 20 years of experience in logistics and supply chain management, Sarah has led ShipFast to become an industry leader through strategic vision and operational excellence.",
+    bio: "With over 20 years of experience in logistics and supply chain management, Sarah has led GlobalTide Express to become an industry leader through strategic vision and operational excellence.",
     image: "/professional-female-ceo.png",
   },
   {

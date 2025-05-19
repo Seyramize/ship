@@ -87,7 +87,7 @@ export default function MobileMenu() {
                     <path d="M21 7H11M11 7L16 2M11 7L16 12" />
                   </svg>
                 </div>
-                <span className="text-2xl font-bold text-primary dark:text-white">ShipFast</span>
+                <span className="text-2xl font-bold text-primary dark:text-white">GlobalTide Express</span>
               </a>
               <button
                 onClick={() => setIsOpen(false)}

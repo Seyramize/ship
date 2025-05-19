@@ -71,8 +71,8 @@ export default function Home() {
               </div>
 
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight animate-fade-in">
-                Global Shipping <br />
-                <span className="text-gradient bg-gradient-to-r from-secondary to-secondary-light">Simplified</span>
+                GlobalTide Express <br />
+                <span className="text-gradient bg-gradient-to-r from-secondary to-secondary-light">Global Shipping Simplified</span>
               </h1>
 
               <p className="text-xl text-white/80 max-w-lg animate-slide-up delay-200">
@@ -374,9 +374,9 @@ export default function Home() {
             </div>
 
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">Why Choose ShipFast Logistics</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">Why Choose GlobalTide Express</h2>
               <p className="text-lg text-gray-600 mb-8">
-                With over 10 years of experience in the shipping and logistics industry, we've built a reputation for
+                With over 10 years of experience in the shipping and logistics industry, GlobalTide Express has built a reputation for
                 reliability, efficiency, and exceptional customer service.
               </p>
 
@@ -412,11 +412,11 @@ export default function Home() {
                     <Globe className="h-6 w-6 text-secondary" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold mb-2">Global Network</h3>
-                    <p className="text-gray-600">
-                      Our extensive network spans over 150 countries, ensuring we can deliver your shipments anywhere in
-                      the world.
-                    </p>
+                  <h3 className="text-xl font-bold mb-2">Global Network</h3>
+                  <p className="text-gray-600">
+                    Our extensive network spans over 150 countries, ensuring GlobalTide Express can deliver your shipments anywhere in
+                    the world.
+                  </p>
                   </div>
                 </div>
 
@@ -425,11 +425,11 @@ export default function Home() {
                     <Package className="h-6 w-6 text-secondary" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold mb-2">Cost-Effective</h3>
-                    <p className="text-gray-600">
-                      We optimize routes and consolidate shipments to provide you with the most economical shipping
-                      options.
-                    </p>
+                  <h3 className="text-xl font-bold mb-2">Cost-Effective</h3>
+                  <p className="text-gray-600">
+                    We optimize routes and consolidate shipments to provide you with the most economical shipping
+                    options at GlobalTide Express.
+                  </p>
                   </div>
                 </div>
               </div>
@@ -522,7 +522,7 @@ export default function Home() {
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">What Our Clients Say</h2>
             <p className="text-lg text-gray-600">
-              Don't just take our word for it. Here's what our clients have to say about our services.
+              Don't just take our word for it. Here's what our clients have to say about GlobalTide Express.
             </p>
           </div>
 
@@ -543,7 +543,7 @@ export default function Home() {
                 </div>
               </div>
               <p className="text-gray-600 mb-6">
-                "ShipFast Logistics has transformed our supply chain with their reliable and efficient shipping
+                "GlobalTide Express has transformed our supply chain with their reliable and efficient shipping
                 services. We've reduced delivery times by 30% since partnering with them."
               </p>
               <div className="flex text-secondary">
@@ -577,7 +577,7 @@ export default function Home() {
                 </div>
               </div>
               <p className="text-gray-600 mb-6">
-                "The team at ShipFast goes above and beyond to ensure our products reach customers on time. Their
+                "The team at GlobalTide Express goes above and beyond to ensure our products reach customers on time. Their
                 customer service is exceptional, and they always find solutions to our shipping challenges."
               </p>
               <div className="flex text-secondary">
@@ -611,7 +611,7 @@ export default function Home() {
                 </div>
               </div>
               <p className="text-gray-600 mb-6">
-                "We've been working with ShipFast Logistics for several years now, and they have consistently exceeded
+                "We've been working with GlobalTide Express for several years now, and they have consistently exceeded
                 our expectations. Their expertise in international shipping is unparalleled."
               </p>
               <div className="flex text-secondary">

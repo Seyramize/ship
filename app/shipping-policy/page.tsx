@@ -3,8 +3,8 @@ import PageHeader from "@/components/page-header"
 import { Card, CardContent } from "@/components/ui/card"
 
 export const metadata: Metadata = {
-  title: "Shipping Policy - ShipFast Logistics",
-  description: "Learn about ShipFast Logistics shipping procedures, delivery times, and shipping options.",
+  title: "Shipping Policy - GlobalTide Express",
+  description: "Learn about GlobalTide Express shipping procedures, delivery times, and shipping options.",
 }
 
 export default function ShippingPolicyPage() {
@@ -20,7 +20,7 @@ export default function ShippingPolicyPage() {
             <section className="mb-8">
               <h2 className="text-2xl font-bold mb-4">Shipping Services</h2>
               <p>
-                ShipFast Logistics offers a variety of shipping services to meet your needs. Our shipping options
+                GlobalTide Express offers a variety of shipping services to meet your needs. Our shipping options
                 include:
               </p>
 
@@ -171,7 +171,7 @@ export default function ShippingPolicyPage() {
                 If you have questions about our shipping policy or need assistance with a shipment, please contact us:
               </p>
               <p className="mt-2">
-                <strong>Email:</strong> shipping@shipfast.com
+                <strong>Email:</strong> shipping@globaltideexpress.com
                 <br />
                 <strong>Phone:</strong> +1 (555) 123-4567
                 <br />

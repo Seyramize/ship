@@ -10,7 +10,7 @@ export default function Footer() {
           <div className="bg-gradient-to-r from-secondary to-secondary-dark rounded-2xl p-8 md:p-12 shadow-soft">
             <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 items-center">
               <div className="lg:col-span-3">
-                <h3 className="text-2xl md:text-3xl font-bold mb-2">Stay Updated with ShipFast</h3>
+                <h3 className="text-2xl md:text-3xl font-bold mb-2">Stay Updated with GlobalTide Express</h3>
                 <p className="text-white/80">
                   Subscribe to our newsletter for the latest shipping news, tips, and exclusive offers.
                 </p>
@@ -43,7 +43,7 @@ export default function Footer() {
               <div className="w-10 h-10 rounded-lg bg-white flex items-center justify-center">
                 <Ship className="h-6 w-6 text-primary" />
               </div>
-              <span className="text-2xl font-bold">ShipFast</span>
+              <span className="text-2xl font-bold">GlobalTide Express</span>
             </div>
             <p className="text-white/70 mb-6">
               Your trusted partner for all shipping and logistics needs. Delivering excellence worldwide since 2005.
@@ -64,7 +64,7 @@ export default function Footer() {
                 </div>
                 <div>
                   <p className="text-sm text-white/60">Email us</p>
-                  <p className="font-medium">info@shipfast.com</p>
+                  <p className="font-medium">info@globaltideexpress.com</p>
                 </div>
               </div>
             </div>
@@ -211,7 +211,7 @@ export default function Footer() {
         <div className="pt-8 border-t border-white/10">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-white/60 text-sm">
-              © {new Date().getFullYear()} ShipFast Logistics. All rights reserved.
+              © {new Date().getFullYear()} GlobalTide Express. All rights reserved.
             </p>
 
             {/* Social Media */}

@@ -77,7 +77,7 @@ export default function Header() {
             <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center">
               <Ship className="h-6 w-6 text-white" />
             </div>
-            <span className="text-2xl font-bold text-primary dark:text-white">ShipFast</span>
+            <span className="text-2xl font-bold text-primary dark:text-white">GlobalTide Express</span>
           </Link>
 
           {/* Desktop Navigation */}

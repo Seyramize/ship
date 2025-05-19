@@ -4,7 +4,7 @@ import Link from "next/link"
 import { Ship, Truck, Plane, CheckCircle, ArrowRight, Package, Scale } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Freight & Cargo Services | ShipFast Logistics",
+  title: "Freight & Cargo Services | GlobalTide Express",
   description:
     "Full-service freight solutions for businesses of all sizes, including FCL, LCL, and specialized cargo handling.",
 }

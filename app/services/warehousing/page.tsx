@@ -4,7 +4,7 @@ import Link from "next/link"
 import { Warehouse, CheckCircle, ArrowRight, Package, BarChart, Truck } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Warehousing & Fulfillment Services | ShipFast Logistics",
+  title: "Warehousing & Fulfillment Services | GlobalTide Express",
   description: "End-to-end logistics solutions including storage, inventory management, and order fulfillment.",
 }
 

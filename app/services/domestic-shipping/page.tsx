@@ -4,7 +4,7 @@ import Link from "next/link"
 import { Truck, Clock, CheckCircle, ArrowRight, MapPin, Package } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Domestic Shipping Services | ShipFast Logistics",
+  title: "Domestic Shipping Services | GlobalTide Express",
   description:
     "Fast and reliable domestic shipping services with options for standard, express, and same-day delivery.",
 }
@@ -331,7 +331,7 @@ export default function DomesticShippingPage() {
             <div>
               <h2 className="text-3xl font-bold mb-6">Ready to Ship with Confidence?</h2>
               <p className="text-xl mb-8">
-                Join thousands of satisfied customers who trust ShipFast for their domestic shipping needs.
+                Join thousands of satisfied customers who trust GlobalTide Express for their domestic shipping needs.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Link

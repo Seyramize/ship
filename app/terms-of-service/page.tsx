@@ -3,8 +3,8 @@ import PageHeader from "@/components/page-header"
 import { Card, CardContent } from "@/components/ui/card"
 
 export const metadata: Metadata = {
-  title: "Terms of Service - ShipFast Logistics",
-  description: "The terms and conditions governing your use of ShipFast Logistics services.",
+  title: "Terms of Service - GlobalTide Express",
+  description: "The terms and conditions governing your use of GlobalTide Express services.",
 }
 
 export default function TermsOfServicePage() {
@@ -20,7 +20,7 @@ export default function TermsOfServicePage() {
             <section className="mb-8">
               <h2 className="text-2xl font-bold mb-4">1. Acceptance of Terms</h2>
               <p>
-                By accessing or using the services provided by ShipFast Logistics ("we," "our," or "us"), including our
+                By accessing or using the services provided by GlobalTide Express ("we," "our," or "us"), including our
                 website, mobile application, and shipping services, you agree to be bound by these Terms of Service. If
                 you do not agree to these terms, please do not use our services.
               </p>
@@ -29,7 +29,7 @@ export default function TermsOfServicePage() {
             <section className="mb-8">
               <h2 className="text-2xl font-bold mb-4">2. Description of Services</h2>
               <p>
-                ShipFast Logistics provides domestic and international shipping, freight, express delivery, warehousing,
+                GlobalTide Express provides domestic and international shipping, freight, express delivery, warehousing,
                 and related logistics services. Our services include but are not limited to package pickup,
                 transportation, delivery, tracking, and customer support.
               </p>
@@ -91,7 +91,7 @@ export default function TermsOfServicePage() {
             <section className="mb-8">
               <h2 className="text-2xl font-bold mb-4">7. Indemnification</h2>
               <p>
-                You agree to indemnify, defend, and hold harmless ShipFast Logistics and its officers, directors,
+                You agree to indemnify, defend, and hold harmless GlobalTide Express and its officers, directors,
                 employees, and agents from and against any claims, liabilities, damages, losses, and expenses, including
                 reasonable attorneys' fees, arising out of or in any way connected with your access to or use of our
                 services, your violation of these Terms, or your violation of any rights of another.
@@ -128,7 +128,7 @@ export default function TermsOfServicePage() {
               <h2 className="text-2xl font-bold mb-4">11. Contact Information</h2>
               <p>If you have any questions about these Terms, please contact us at:</p>
               <p className="mt-2">
-                <strong>Email:</strong> legal@shipfast.com
+                <strong>Email:</strong> legal@globaltideexpress.com
                 <br />
                 <strong>Address:</strong> 123 Logistics Way, Shipping City, SC 12345
                 <br />

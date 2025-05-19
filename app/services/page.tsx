@@ -6,7 +6,7 @@ import PageHeader from "@/components/page-header"
 import { cn } from "@/lib/utils"
 
 export const metadata: Metadata = {
-  title: "Our Services - ShipFast Logistics",
+  title: "Our Services - GlobalTide Express",
   description:
     "Explore our comprehensive range of shipping and logistics services including domestic shipping, international shipping, freight & cargo, express delivery, and warehousing.",
 }

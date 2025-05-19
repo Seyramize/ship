@@ -4,7 +4,7 @@ import Link from "next/link"
 import { Clock, CheckCircle, ArrowRight, Truck, MapPin, Calendar } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Express Delivery Services | ShipFast Logistics",
+  title: "Express Delivery Services | GlobalTide Express",
   description: "Time-critical shipping options with guaranteed delivery times for urgent shipments.",
 }
 

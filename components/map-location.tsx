@@ -14,7 +14,7 @@ export default function MapLocation() {
             allowFullScreen
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-            title="ShipFast Logistics Location"
+            title="GlobalTide Express Location"
           ></iframe>
         </div>
       </CardContent>

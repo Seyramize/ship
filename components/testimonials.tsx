@@ -8,28 +8,28 @@ import { cn } from "@/lib/utils"
 const testimonials = [
   {
     quote:
-      "ShipFast Logistics has transformed our supply chain with their reliable and efficient shipping services. We've reduced delivery times by 30% since partnering with them.",
+      "GlobalTide Express has transformed our supply chain with their reliable and efficient shipping services. We've reduced delivery times by 30% since partnering with them.",
     author: "Sarah Johnson",
     position: "Supply Chain Director, TechCorp Inc.",
     logo: "/abstract-tech-logo.png",
   },
   {
     quote:
-      "The team at ShipFast goes above and beyond to ensure our products reach customers on time. Their customer service is exceptional, and they always find solutions to our shipping challenges.",
+      "The team at GlobalTide Express goes above and beyond to ensure our products reach customers on time. Their customer service is exceptional, and they always find solutions to our shipping challenges.",
     author: "Michael Chen",
     position: "Operations Manager, Global Retail",
     logo: "/abstract-retail-logo.png",
   },
   {
     quote:
-      "We've been working with ShipFast for over 5 years, and they've consistently provided outstanding service. Their international shipping expertise has helped us expand into new markets seamlessly.",
+      "We've been working with GlobalTide Express for over 5 years, and they've consistently provided outstanding service. Their international shipping expertise has helped us expand into new markets seamlessly.",
     author: "Emma Rodriguez",
     position: "CEO, Artisan Exports",
     logo: "/placeholder-e4v9c.png",
   },
   {
     quote:
-      "As a small business, finding a reliable shipping partner was crucial. ShipFast offers competitive rates without compromising on service quality. They've been instrumental in our growth.",
+      "As a small business, finding a reliable shipping partner was crucial. GlobalTide Express offers competitive rates without compromising on service quality. They've been instrumental in our growth.",
     author: "David Patel",
     position: "Founder, Handcrafted Goods",
     logo: "/placeholder-wrwm5.png",

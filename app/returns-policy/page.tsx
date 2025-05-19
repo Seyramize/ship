@@ -3,8 +3,8 @@ import PageHeader from "@/components/page-header"
 import { Card, CardContent } from "@/components/ui/card"
 
 export const metadata: Metadata = {
-  title: "Returns Policy - ShipFast Logistics",
-  description: "Learn about ShipFast Logistics returns procedures, refunds, and claims process.",
+  title: "Returns Policy - GlobalTide Express",
+  description: "Learn about GlobalTide Express returns procedures, refunds, and claims process.",
 }
 
 export default function ReturnsPolicyPage() {
@@ -20,7 +20,7 @@ export default function ReturnsPolicyPage() {
             <section className="mb-8">
               <h2 className="text-2xl font-bold mb-4">Service Cancellations</h2>
               <p>
-                At ShipFast Logistics, we understand that plans can change. Our cancellation policy for shipping
+                At GlobalTide Express, we understand that plans can change. Our cancellation policy for shipping
                 services is as follows:
               </p>
               <ul className="list-disc pl-6 mb-4">
@@ -166,7 +166,7 @@ export default function ReturnsPolicyPage() {
                 For questions about our returns policy or to file a claim, please contact our customer service team:
               </p>
               <p className="mt-2">
-                <strong>Email:</strong> claims@shipfast.com
+                <strong>Email:</strong> claims@globaltideexpress.com
                 <br />
                 <strong>Phone:</strong> +1 (555) 987-6543
                 <br />

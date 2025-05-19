@@ -3,8 +3,8 @@ import PageHeader from "@/components/page-header"
 import { Card, CardContent } from "@/components/ui/card"
 
 export const metadata: Metadata = {
-  title: "Privacy Policy - ShipFast Logistics",
-  description: "Learn about how ShipFast Logistics collects, uses, and protects your personal information.",
+  title: "Privacy Policy - GlobalTide Express",
+  description: "Learn about how GlobalTide Express collects, uses, and protects your personal information.",
 }
 
 export default function PrivacyPolicyPage() {
@@ -20,7 +20,7 @@ export default function PrivacyPolicyPage() {
             <section className="mb-8">
               <h2 className="text-2xl font-bold mb-4">Introduction</h2>
               <p>
-                ShipFast Logistics ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy
+                GlobalTide Express ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy
                 explains how we collect, use, disclose, and safeguard your information when you use our website, mobile
                 application, or shipping services.
               </p>
@@ -120,7 +120,7 @@ export default function PrivacyPolicyPage() {
                 at:
               </p>
               <p className="mt-2">
-                <strong>Email:</strong> privacy@shipfast.com
+                <strong>Email:</strong> privacy@globaltideexpress.com
                 <br />
                 <strong>Address:</strong> 123 Logistics Way, Shipping City, SC 12345
                 <br />

@@ -11,8 +11,8 @@ export default function ContactInfo() {
             <Mail className="h-5 w-5 text-primary mt-0.5" />
             <div>
               <p className="font-medium">Email</p>
-              <a href="mailto:info@shipfast.com" className="text-primary hover:underline">
-                info@shipfast.com
+              <a href="mailto:info@globaltideexpress.com" className="text-primary hover:underline">
+                info@globaltideexpress.com
               </a>
             </div>
           </div>

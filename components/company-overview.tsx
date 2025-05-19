@@ -31,7 +31,7 @@ export default function CompanyOverview() {
   return (
     <section className="container mx-auto px-4 py-12">
       <div className="text-center max-w-3xl mx-auto mb-12">
-        <h2 className="text-3xl font-bold mb-4">Why Choose ShipFast Logistics</h2>
+        <h2 className="text-3xl font-bold mb-4">Why Choose GlobalTide Express</h2>
         <p className="text-lg text-muted-foreground">
           With over 15 years of experience in the shipping and logistics industry, we've built a reputation for
           reliability, efficiency, and exceptional customer service.

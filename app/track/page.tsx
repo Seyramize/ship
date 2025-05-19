@@ -4,7 +4,7 @@ import { Suspense } from "react"
 import PageHeader from "@/components/page-header"
 
 export const metadata: Metadata = {
-  title: "Track Your Shipment - ShipFast Logistics",
+  title: "Track Your Shipment - GlobalTide Express",
   description:
     "Track your shipment in real-time with our easy-to-use tracking system. Get detailed information about your package location and delivery status.",
 }

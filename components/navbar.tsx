@@ -85,7 +85,7 @@ export default function Navbar() {
                 isScrolled ? "text-navy-800 dark:text-white" : "text-white"
               }`}
             >
-              ShipFast
+              GlobalTide Express
             </span>
           </Link>
 
@@ -93,7 +93,7 @@ export default function Navbar() {
           <nav className="hidden lg:block">
             <ul className="flex items-center space-x-1">
               {navLinks.map((link) => (
-                <li key={link.name} className="relative" ref={link.dropdown ? dropdownRef : undefined}>
+                <li key={link.name} className="relative">
                   {link.dropdown ? (
                     <div>
                       <button
@@ -114,6 +114,7 @@ export default function Navbar() {
                       <AnimatePresence>
                         {activeDropdown === link.name && (
                           <motion.div
+                            ref={dropdownRef}
                             initial={{ opacity: 0, y: 10 }}
                             animate={{ opacity: 1, y: 0 }}
                             exit={{ opacity: 0, y: 10 }}

@@ -3,7 +3,7 @@ import QuoteForm from "@/components/quote-form"
 import PageHeader from "@/components/page-header"
 
 export const metadata: Metadata = {
-  title: "Request a Quote - ShipFast Logistics",
+  title: "Request a Quote - GlobalTide Express",
   description:
     "Get a customized shipping quote tailored to your specific needs. Fill out our simple form and receive a competitive quote quickly.",
 }

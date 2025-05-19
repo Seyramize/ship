@@ -4,7 +4,7 @@ import Link from "next/link"
 import { Globe, Clock, CheckCircle, ArrowRight, Shield, FileText } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "International Shipping Services | ShipFast Logistics",
+  title: "International Shipping Services | GlobalTide Express",
   description: "Comprehensive global shipping solutions with customs clearance assistance and tracking capabilities.",
 }
 
@@ -382,7 +382,7 @@ export default function InternationalShippingPage() {
             <div>
               <h2 className="text-3xl font-bold mb-6">Ready to Ship Globally?</h2>
               <p className="text-xl mb-8">
-                Join thousands of businesses and individuals who trust ShipFast for their international shipping needs.
+                Join thousands of businesses and individuals who trust GlobalTide Express for their international shipping needs.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Link
