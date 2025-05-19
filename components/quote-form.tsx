@@ -9,6 +9,7 @@ import { Input } from "@/components/ui/input"
 import { Card, CardContent } from "@/components/ui/card"
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
+import { AutocompleteInput } from "@/components/ui/autocomplete-input"
 import { Textarea } from "@/components/ui/textarea"
 import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
@@ -269,13 +270,13 @@ export default function QuoteForm() {
                       <FormItem>
                         <FormLabel>Pickup Location</FormLabel>
                         <FormControl>
-                          <Input
-                            placeholder="Enter pickup address"
-                            {...field}
-                            onChange={(e) => {
-                              field.onChange(e)
+                          <AutocompleteInput
+                            value={field.value}
+                            onChange={(val) => {
+                              field.onChange(val)
                               form.trigger("pickupLocation")
                             }}
+                            placeholder="Search for pickup location"
                           />
                         </FormControl>
                         <FormMessage />
@@ -290,13 +291,13 @@ export default function QuoteForm() {
                       <FormItem>
                         <FormLabel>Delivery Location</FormLabel>
                         <FormControl>
-                          <Input
-                            placeholder="Enter delivery address"
-                            {...field}
-                            onChange={(e) => {
-                              field.onChange(e)
+                          <AutocompleteInput
+                            value={field.value}
+                            onChange={(val) => {
+                              field.onChange(val)
                               form.trigger("deliveryLocation")
                             }}
+                            placeholder="Search for delivery location"
                           />
                         </FormControl>
                         <FormMessage />

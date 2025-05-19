@@ -1,8 +1,47 @@
+
+
+"use client";
 import Link from "next/link"
 import Image from "next/image"
 import { ArrowRight, CheckCircle, Ship, Globe, Truck, Package, Clock, Shield } from "lucide-react"
+import React, { useState } from "react"
+import { AutocompleteInput } from "@/components/ui/autocomplete-input"
+
 
 export default function Home() {
+  const [origin, setOrigin] = useState("");
+  const [destination, setDestination] = useState("");
+  const [weight, setWeight] = useState("");
+  const [packageType, setPackageType] = useState("Parcel");
+  const [result, setResult] = useState<string | null>(null);
+  const [error, setError] = useState<string | null>(null);
+
+  // Simple shipping calculation logic (replace with real API as needed)
+  function calculateShipping(origin: string, destination: string, weight: string, packageType: string): string {
+    if (!origin || !destination || !weight) return "Please fill in all fields.";
+    const w = parseFloat(weight);
+    if (isNaN(w) || w <= 0) return "Please enter a valid weight.";
+    let base = 10;
+    if (packageType === "Document") base = 5;
+    if (packageType === "Freight") base = 25;
+    // Fake distance factor
+    const distanceFactor = origin !== destination ? 1.5 : 1;
+    const price = (base + w * 2) * distanceFactor;
+    return `Estimated Shipping Cost: $${price.toFixed(2)}`;
+  }
+
+  const handleCalculatorSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    setError(null);
+    const res = calculateShipping(origin, destination, weight, packageType);
+    if (res.startsWith("Estimated")) {
+      setResult(res);
+    } else {
+      setResult(null);
+      setError(res);
+    }
+  };
+
   return (
     <>
       {/* Hero Section */}
@@ -27,7 +66,7 @@ export default function Home() {
               <div className="inline-block px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full">
                 <p className="text-white/90 font-medium flex items-center gap-2">
                   <span className="w-2 h-2 bg-secondary rounded-full"></span>
-                  Trusted by 10,000+ businesses worldwide
+                  Trusted by 1,000+ businesses worldwide
                 </p>
               </div>
 
@@ -58,7 +97,7 @@ export default function Home() {
                 </Link>
               </div>
 
-              <div className="flex flex-wrap items-center gap-6 text-white animate-slide-up delay-400">
+              <div className="flex flex-wrap items-center gap-6 text-black animate-slide-up delay-400">
                 <div className="flex items-center gap-2">
                   <CheckCircle className="h-5 w-5 text-secondary" />
                   <span>Fast Delivery</span>
@@ -80,21 +119,21 @@ export default function Home() {
                   <Ship className="h-8 w-8 text-white" />
                 </div>
                 <h3 className="text-xl font-bold mb-4 mt-6">Quick Shipping Calculator</h3>
-                <form className="space-y-4">
+                <form className="space-y-4" onSubmit={handleCalculatorSubmit}>
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-1">Origin</label>
-                    <input
-                      type="text"
-                      placeholder="Enter pickup location"
-                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-secondary focus:border-transparent"
+                    <AutocompleteInput
+                      value={origin}
+                      onChange={setOrigin}
+                      placeholder="Search for pickup location"
                     />
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-1">Destination</label>
-                    <input
-                      type="text"
-                      placeholder="Enter delivery location"
-                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-secondary focus:border-transparent"
+                    <AutocompleteInput
+                      value={destination}
+                      onChange={setDestination}
+                      placeholder="Search for delivery location"
                     />
                   </div>
                   <div className="grid grid-cols-2 gap-4">
@@ -103,12 +142,18 @@ export default function Home() {
                       <input
                         type="text"
                         placeholder="kg"
+                        value={weight}
+                        onChange={e => setWeight(e.target.value)}
                         className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-secondary focus:border-transparent"
                       />
                     </div>
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-1">Package Type</label>
-                      <select className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-secondary focus:border-transparent">
+                      <select
+                        className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-secondary focus:border-transparent"
+                        value={packageType}
+                        onChange={e => setPackageType(e.target.value)}
+                      >
                         <option>Parcel</option>
                         <option>Document</option>
                         <option>Freight</option>
@@ -121,6 +166,16 @@ export default function Home() {
                   >
                     Calculate Shipping
                   </button>
+                  {result && (
+                    <div className="mt-4 p-3 bg-green-50 text-green-800 rounded text-center font-semibold border border-green-200">
+                      {result}
+                    </div>
+                  )}
+                  {error && (
+                    <div className="mt-4 p-3 bg-red-50 text-red-800 rounded text-center font-semibold border border-red-200">
+                      {error}
+                    </div>
+                  )}
                 </form>
               </div>
 
