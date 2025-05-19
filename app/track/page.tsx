@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import TrackingPage from "@/components/tracking-page"
+import { Suspense } from "react"
 import PageHeader from "@/components/page-header"
 
 export const metadata: Metadata = {
@@ -12,7 +13,9 @@ export default function TrackPage() {
   return (
     <div className="container mx-auto px-4 py-12">
       <PageHeader title="Track Your Shipment" description="Real-time tracking for your peace of mind" />
-      <TrackingPage />
+      <Suspense fallback={<div>Loading tracking page...</div>}>
+        <TrackingPage />
+      </Suspense>
     </div>
   )
 }
