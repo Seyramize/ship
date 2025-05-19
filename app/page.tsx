@@ -179,10 +179,10 @@ export default function Home() {
                 </form>
               </div>
 
-              {/* Decorative elements */}
-              <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-primary rounded-2xl z-0"></div>
-              <div className="absolute top-1/2 -right-5 transform -translate-y-1/2 w-10 h-10 bg-secondary rounded-full z-0"></div>
-              <div className="absolute -top-5 right-10 w-20 h-20 border-4 border-secondary/30 rounded-full z-0"></div>
+              {/* Decorative elements - now more visible for demonstration */}
+              <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-yellow-300 border-4 border-yellow-700 rounded-2xl z-10 shadow-2xl opacity-90 animate-bounce-slow"></div>
+              <div className="absolute top-1/2 -right-5 transform -translate-y-1/2 w-14 h-14 bg-pink-500 border-4 border-pink-700 rounded-full z-10 shadow-2xl opacity-90 animate-pulse"></div>
+              <div className="absolute -top-5 right-10 w-24 h-24 border-8 border-green-500 bg-green-200 rounded-full z-10 shadow-2xl opacity-90 animate-spin-slow"></div>
             </div>
           </div>
         </div>
@@ -199,27 +199,49 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Trusted By Section */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-10">
-            <h2 className="text-2xl font-medium text-gray-600">Trusted by Leading Companies Worldwide</h2>
-          </div>
-          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16">
-            {[1, 2, 3, 4, 5, 6].map((i) => (
-              <div key={i} className="grayscale hover:grayscale-0 transition-all duration-300">
-                <Image
-                  src={`/client-logo-${i}.png`}
-                  alt={`Client Logo ${i}`}
-                  width={120}
-                  height={60}
-                  className="h-12 w-auto object-contain"
-                />
+      {/* Trusted By Section with Slide Animation */}
+      {(() => {
+        const [showTrustedBy, setShowTrustedBy] = React.useState(true);
+        const [hasMounted, setHasMounted] = React.useState(false);
+        React.useEffect(() => {
+          setHasMounted(true);
+          const interval = setInterval(() => {
+            setShowTrustedBy((prev) => !prev);
+          }, 3500);
+          return () => clearInterval(interval);
+        }, []);
+        return (
+          <div className="relative">
+            <section
+              className={
+                `py-16 transition-transform duration-700 ease-in-out will-change-transform ` +
+                (hasMounted && showTrustedBy
+                  ? 'translate-x-0 opacity-100'
+                  : '-translate-x-full opacity-0')
+              }
+            >
+              <div className="container mx-auto px-4">
+                <div className="text-center mb-10">
+                  <h2 className="text-2xl font-medium text-gray-600">Trusted by Leading Companies Worldwide</h2>
+                </div>
+                <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16">
+                  {[1, 2, 3, 4, 5, 6].map((i) => (
+                    <div key={i} className="grayscale hover:grayscale-0 transition-all duration-300">
+                      <Image
+                        src={`/client-logo-${i}.png`}
+                        alt={`Client Logo ${i}`}
+                        width={120}
+                        height={60}
+                        className="h-12 w-auto object-contain"
+                      />
+                    </div>
+                  ))}
+                </div>
               </div>
-            ))}
+            </section>
           </div>
-        </div>
-      </section>
+        );
+      })()}
 
       {/* Services Section */}
       <section className="py-20 bg-slate-50">
@@ -343,7 +365,7 @@ export default function Home() {
                       <Ship className="h-8 w-8 text-secondary" />
                     </div>
                     <div>
-                      <p className="text-4xl font-bold text-primary">99.7%</p>
+                      <p className="text-4xl font-bold text-primary">89.7%</p>
                       <p className="text-gray-600">On-time delivery rate</p>
                     </div>
                   </div>
@@ -354,7 +376,7 @@ export default function Home() {
             <div>
               <h2 className="text-3xl md:text-4xl font-bold mb-6">Why Choose ShipFast Logistics</h2>
               <p className="text-lg text-gray-600 mb-8">
-                With over 15 years of experience in the shipping and logistics industry, we've built a reputation for
+                With over 10 years of experience in the shipping and logistics industry, we've built a reputation for
                 reliability, efficiency, and exceptional customer service.
               </p>
 
