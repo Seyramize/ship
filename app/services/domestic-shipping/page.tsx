@@ -23,10 +23,10 @@ export default function DomesticShippingPage() {
                   Domestic Shipping Services
                 </p>
               </div>
-              <h1 className="text-4xl md:text-5xl font-bold leading-tight">
+              <h1 className="text-4xl md:text-5xl font-bold leading-tight text-teal-500">
                 Fast & Reliable <span className="text-teal-400">Domestic Shipping</span> Solutions
               </h1>
-              <p className="text-lg text-white/80 max-w-lg">
+              <p className="text-lg text-gray-600 max-w-lg">
                 Our domestic shipping services provide fast, reliable, and cost-effective delivery solutions for
                 businesses and individuals across the country.
               </p>
@@ -40,7 +40,7 @@ export default function DomesticShippingPage() {
                 </Link>
                 <Link
                   href="/contact"
-                  className="px-6 py-3 bg-white/10 hover:bg-white/20 text-white font-medium rounded-full border border-white/30 transition-all"
+                  className="px-6 py-3 bg-teal-500 hover:bg-teal-600 text-white font-medium rounded-full border border-white/30 transition-all"
                 >
                   Contact Sales
                 </Link>
@@ -48,7 +48,7 @@ export default function DomesticShippingPage() {
             </div>
             <div className="relative">
               <Image
-                src="/domestic-shipping-hero.png"
+                src="/domestic-shipping-hero.jpg"
                 alt="Domestic Shipping"
                 width={600}
                 height={400}
@@ -61,7 +61,7 @@ export default function DomesticShippingPage() {
                   </div>
                   <div>
                     <p className="text-sm text-gray-600">Average Delivery Time</p>
-                    <p className="text-lg font-bold text-navy-800">1-3 Business Days</p>
+                    <p className="text-lg font-bold  text-gray-600">1-3 Business Days</p>
                   </div>
                 </div>
               </div>
@@ -234,7 +234,7 @@ export default function DomesticShippingPage() {
             </div>
             <div className="relative">
               <Image
-                src="/domestic-coverage-map.png"
+                src="/domestic-coverage.jpg"
                 alt="Nationwide Coverage Map"
                 width={600}
                 height={450}

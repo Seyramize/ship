@@ -200,7 +200,7 @@ export default function Home() {
       </section>
 
       {/* Trusted By Section with Slide Animation */}
-      {(() => {
+      {/* {(() => {
         const [showTrustedBy, setShowTrustedBy] = React.useState(true);
         const [hasMounted, setHasMounted] = React.useState(false);
         React.useEffect(() => {
@@ -241,7 +241,7 @@ export default function Home() {
             </section>
           </div>
         );
-      })()}
+      })()} */}
 
       {/* Services Section */}
       <section className="py-20 bg-slate-50">
@@ -531,7 +531,7 @@ export default function Home() {
             <div className="bg-white rounded-2xl shadow-soft p-8 hover-lift">
               <div className="flex items-center gap-4 mb-6">
                 <Image
-                  src="/testimonial-1.jpg"
+                  src="/pp2.jpg"
                   alt="Sarah Johnson"
                   width={60}
                   height={60}
@@ -565,7 +565,7 @@ export default function Home() {
             <div className="bg-white rounded-2xl shadow-soft p-8 hover-lift">
               <div className="flex items-center gap-4 mb-6">
                 <Image
-                  src="/testimonial-2.jpg"
+                  src="/pp1.jpg"
                   alt="Michael Chen"
                   width={60}
                   height={60}
@@ -599,7 +599,7 @@ export default function Home() {
             <div className="bg-white rounded-2xl shadow-soft p-8 hover-lift">
               <div className="flex items-center gap-4 mb-6">
                 <Image
-                  src="/testimonial-3.jpg"
+                  src="/pp3.jpg"
                   alt="Emma Rodriguez"
                   width={60}
                   height={60}

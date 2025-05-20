@@ -120,9 +120,20 @@ export default function ContactForm() {
             />
           </div>
 
-          <Button type="submit" className="w-full" disabled={isLoading}>
-            {isLoading ? "Sending..." : "Send Message"}
-          </Button>
+          <div className="relative w-full group">
+            <Button type="submit" className="w-full relative" disabled={isLoading}>
+              {isLoading ? "Sending..." : (
+                <>
+                  <span
+                    className="transition-colors duration-200 group-hover:text-secondary"
+                  >
+                    Send Message
+                  </span>
+                </>
+              )}
+            </Button>
+           
+          </div>
         </form>
       </CardContent>
     </Card>

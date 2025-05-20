@@ -23,10 +23,10 @@ export default function FreightCargoPage() {
                   Freight & Cargo Services
                 </p>
               </div>
-              <h1 className="text-4xl md:text-5xl font-bold leading-tight">
+              <h1 className="text-4xl md:text-5xl font-bold leading-tight text-teal-600">
                 Powerful <span className="text-teal-400">Freight Solutions</span> for Every Business
               </h1>
-              <p className="text-lg text-white/80 max-w-lg">
+              <p className="text-lg text-gray-600 max-w-lg">
                 From small shipments to full containers, our comprehensive freight and cargo services are designed to
                 meet the needs of businesses of all sizes.
               </p>
@@ -40,7 +40,7 @@ export default function FreightCargoPage() {
                 </Link>
                 <Link
                   href="/contact"
-                  className="px-6 py-3 bg-white/10 hover:bg-white/20 text-white font-medium rounded-full border border-white/30 transition-all"
+                  className="px-6 py-3 bg-teal-400 hover:bg-teal-600 text-white font-medium rounded-full border border-white/30 transition-all"
                 >
                   Contact Sales
                 </Link>
@@ -48,7 +48,7 @@ export default function FreightCargoPage() {
             </div>
             <div className="relative">
               <Image
-                src="/freight-cargo-hero.png"
+                src="/freight-cargo.jpg"
                 alt="Freight and Cargo Services"
                 width={600}
                 height={400}
@@ -61,7 +61,7 @@ export default function FreightCargoPage() {
                   </div>
                   <div>
                     <p className="text-sm text-gray-600">Freight Capacity</p>
-                    <p className="text-lg font-bold text-navy-800">Up to 40,000 lbs</p>
+                    <p className="text-lg font-bold text-gray-800">Up to 40,000 lbs</p>
                   </div>
                 </div>
               </div>

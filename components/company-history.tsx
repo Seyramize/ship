@@ -21,7 +21,7 @@ export default function CompanyHistory() {
 
       <div className="relative h-64 md:h-80 rounded-lg overflow-hidden">
         <img
-          src="/placeholder-yp1j3.png"
+          src="/ship-headquarters.jpg"
           alt="GlobalTide Express Headquarters"
           className="w-full h-full object-cover"
         />

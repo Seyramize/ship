@@ -3,19 +3,19 @@ const teamMembers = [
     name: "Sarah Johnson",
     role: "Chief Executive Officer",
     bio: "With over 20 years of experience in logistics and supply chain management, Sarah has led GlobalTide Express to become an industry leader through strategic vision and operational excellence.",
-    image: "/professional-female-ceo.png",
+    image: "/pp2.jpg",
   },
   {
     name: "Michael Chen",
     role: "Chief Operations Officer",
     bio: "Michael oversees our global operations, ensuring efficient processes and exceptional service delivery across all regions. His background in process optimization has transformed our operational capabilities.",
-    image: "/professional-coo-portrait.png",
+    image: "/pp1.jpg",
   },
   {
-    name: "David Rodriguez",
+    name: "Emma Rodriguez",
     role: "Chief Technology Officer",
     bio: "David leads our technology initiatives, developing innovative solutions that enhance tracking capabilities, optimize routes, and improve the overall customer experience.",
-    image: "/professional-cto-portrait.png",
+    image: "/pp3.jpg",
   },
   {
     name: "Aisha Patel",

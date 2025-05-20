@@ -22,10 +22,10 @@ export default function InternationalShippingPage() {
                   International Shipping Services
                 </p>
               </div>
-              <h1 className="text-4xl md:text-5xl font-bold leading-tight">
+              <h1 className="text-4xl md:text-5xl font-bold leading-tight text-teal-600">
                 Global Shipping <span className="text-teal-400">Made Simple</span>
               </h1>
-              <p className="text-lg text-white/80 max-w-lg">
+              <p className="text-lg text-gray-800 max-w-lg">
                 Our international shipping services connect businesses and individuals to over 200 countries and
                 territories worldwide with reliable, efficient delivery solutions.
               </p>
@@ -39,7 +39,7 @@ export default function InternationalShippingPage() {
                 </Link>
                 <Link
                   href="/contact"
-                  className="px-6 py-3 bg-white/10 hover:bg-white/20 text-white font-medium rounded-full border border-white/30 transition-all"
+                  className="px-6 py-3 bg-teal-400 hover:bg-teal-800 text-white font-medium rounded-full border border-white/30 transition-all"
                 >
                   Contact Sales
                 </Link>
@@ -47,7 +47,7 @@ export default function InternationalShippingPage() {
             </div>
             <div className="relative">
               <Image
-                src="/international-shipping-hero.png"
+                src="/international-shipping.jpg"
                 alt="International Shipping"
                 width={600}
                 height={400}
@@ -60,7 +60,7 @@ export default function InternationalShippingPage() {
                   </div>
                   <div>
                     <p className="text-sm text-gray-600">Global Coverage</p>
-                    <p className="text-lg font-bold text-navy-800">200+ Countries</p>
+                    <p className="text-lg font-bold text-gray-600">200+ Countries</p>
                   </div>
                 </div>
               </div>
@@ -190,7 +190,7 @@ export default function InternationalShippingPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="order-2 lg:order-1 relative">
               <Image
-                src="/global-coverage-map.png"
+                src="/global-coverage.jpg"
                 alt="Global Coverage Map"
                 width={600}
                 height={450}
