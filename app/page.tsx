@@ -91,23 +91,23 @@ export default function Home() {
 
                 <Link
                   href="/track"
-                  className="px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-medium rounded-full border border-white/30 transition-all flex items-center gap-2"
+                  className="px-8 py-4 bg-secondary hover:bg-secondary-light text-white font-medium rounded-full transition-all flex items-center gap-2 hover-lift"
                 >
                   Track Shipment
                 </Link>
               </div>
 
               <div className="flex flex-wrap items-center gap-6 text-black animate-slide-up delay-400">
-                <div className="flex items-center gap-2">
-                  <CheckCircle className="h-5 w-5 text-secondary" />
+                <div className="flex items-center gap-2 text-teal-300">
+                  <CheckCircle className="h-5 w-5 text-secondary text-yellow-600" />
                   <span>Fast Delivery</span>
                 </div>
-                <div className="flex items-center gap-2">
-                  <CheckCircle className="h-5 w-5 text-secondary" />
+                <div className="flex items-center gap-2 text-teal-300">
+                  <CheckCircle className="h-5 w-5 text-secondary text-yellow-600" />
                   <span>Global Coverage</span>
                 </div>
-                <div className="flex items-center gap-2">
-                  <CheckCircle className="h-5 w-5 text-secondary" />
+                <div className="flex items-center gap-2 text-teal-300">
+                  <CheckCircle className="h-5 w-5 text-secondary text-yellow-600" />
                   <span>Secure Shipping</span>
                 </div>
               </div>

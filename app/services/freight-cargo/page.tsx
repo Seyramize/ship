@@ -334,7 +334,7 @@ export default function FreightCargoPage() {
 
             <div className="relative">
               <Image
-                src="/freight-benefits.png"
+                src="/freight-benefits.jpg"
                 alt="Freight Services Benefits"
                 width={600}
                 height={450}
@@ -362,8 +362,8 @@ export default function FreightCargoPage() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl font-bold mb-6">Ready to Ship Your Freight?</h2>
-              <p className="text-xl mb-8">
+              <h2 className="text-3xl font-bold mb-6  text-gray-800">Ready to Ship Your Freight?</h2>
+              <p className="text-xl mb-8 text-gray-800">
                 Contact our freight specialists today to discuss your shipping needs and get a customized solution.
               </p>
               <div className="flex flex-wrap gap-4">
@@ -375,55 +375,60 @@ export default function FreightCargoPage() {
                 </Link>
                 <Link
                   href="/contact"
-                  className="px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-medium rounded-full border border-white/30 transition-colors"
+                  className="px-8 py-4 bg-teal-500 hover:bg-teal-600 text-white font-medium rounded-full border border-white/30 transition-colors"
                 >
                   Contact Freight Team
                 </Link>
               </div>
             </div>
             <div>
-              <div className="bg-white/10 p-8 rounded-lg backdrop-blur-sm">
-                <h3 className="text-2xl font-bold mb-6">Request a Callback</h3>
+              <div className="bg-white/80 p-8 rounded-lg shadow-lg">
+                <h3 className="text-2xl font-bold mb-6 text-teal-700">Request a Callback</h3>
                 <form className="space-y-4">
                   <div>
                     <input
                       type="text"
                       placeholder="Your Name"
-                      className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder:text-white/60 focus:outline-none focus:ring-2 focus:ring-teal-500"
+                      className="w-full px-4 py-3 rounded-lg text-gray-900 bg-white border border-gray-300 text-navy-900 placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-teal-500"
                     />
                   </div>
                   <div>
                     <input
                       type="email"
                       placeholder="Your Email"
-                      className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder:text-white/60 focus:outline-none focus:ring-2 focus:ring-teal-500"
+                      className="w-full px-4 py-3 rounded-lg bg-white border border-gray-300 text-navy-900 placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-teal-500"
                     />
                   </div>
                   <div>
                     <input
                       type="tel"
                       placeholder="Your Phone"
-                      className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder:text-white/60 focus:outline-none focus:ring-2 focus:ring-teal-500"
+                      className="w-full px-4 py-3 rounded-lg bg-white border border-gray-300 text-navy-900 placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-teal-500"
                     />
                   </div>
                   <div>
-                    <select className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white focus:outline-none focus:ring-2 focus:ring-teal-500">
-                      <option value="" className="bg-navy-800">
-                        Select Freight Type
-                      </option>
-                      <option value="ocean" className="bg-navy-800">
-                        Ocean Freight
-                      </option>
-                      <option value="air" className="bg-navy-800">
-                        Air Freight
-                      </option>
-                      <option value="ground" className="bg-navy-800">
-                        Ground Freight
-                      </option>
-                      <option value="specialized" className="bg-navy-800">
-                        Specialized Freight
-                      </option>
-                    </select>
+                    <div className="relative w-full rounded-lg bg-gray-100 border border-gray-300">
+                      
+                      <select
+                        className="w-full px-4 py-3 rounded-lg bg-white border-none text-gray-900 font-semibold appearance-none focus:outline-none focus:ring-2 focus:ring-teal-500"
+                        style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg width=\'20\' height=\'20\' viewBox=\'0 0 20 20\' fill=\'none\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cpath d=\'M6 8L10 12L14 8\' stroke=\'%236B7280\' stroke-width=\'2\' stroke-linecap=\'round\' stroke-linejoin=\'round\'/%3E%3C/svg%3E")', backgroundRepeat: 'no-repeat', backgroundPosition: 'right 1rem center', backgroundSize: '1.25rem 1.25rem' }}
+                        defaultValue=""
+                      >
+                        <option value="" disabled hidden className="text-gray-400">Select Freight Type</option>
+                        <option value="ocean" className="bg-gray-100 text-gray-900 font-semibold">
+                          Ocean Freight
+                        </option>
+                        <option value="air" className="bg-gray-100 text-gray-900 font-semibold">
+                          Air Freight
+                        </option>
+                        <option value="ground" className="bg-gray-100 text-gray-900 font-semibold">
+                          Ground Freight
+                        </option>
+                        <option value="specialized" className="bg-gray-100 text-gray-900 font-semibold">
+                          Specialized Freight
+                        </option>
+                      </select>
+                    </div>
                   </div>
                   <button
                     type="submit"

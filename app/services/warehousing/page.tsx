@@ -22,10 +22,10 @@ export default function WarehousingPage() {
                   Warehousing & Fulfillment Services
                 </p>
               </div>
-              <h1 className="text-4xl md:text-5xl font-bold leading-tight">
+              <h1 className="text-4xl md:text-5xl font-bold text-teal-600 leading-tight">
                 Complete <span className="text-teal-400">Warehousing Solutions</span> for Your Business
               </h1>
-              <p className="text-lg text-white/80 max-w-lg">
+              <p className="text-lg text-black max-w-lg">
                 Our comprehensive warehousing and fulfillment services help businesses of all sizes streamline their
                 supply chain and improve operational efficiency.
               </p>
@@ -39,7 +39,7 @@ export default function WarehousingPage() {
                 </Link>
                 <Link
                   href="/contact"
-                  className="px-6 py-3 bg-white/10 hover:bg-white/20 text-white font-medium rounded-full border border-white/30 transition-all"
+                  className="px-6 py-3 bg-teal-500 hover:bg-teal-600 text-white font-medium rounded-full border border-white/30 transition-all"
                 >
                   Contact Sales
                 </Link>
@@ -47,7 +47,7 @@ export default function WarehousingPage() {
             </div>
             <div className="relative">
               <Image
-                src="/warehousing-hero.png"
+                src="/warehousing-hero.jpg"
                 alt="Warehousing and Fulfillment"
                 width={600}
                 height={400}
@@ -60,7 +60,7 @@ export default function WarehousingPage() {
                   </div>
                   <div>
                     <p className="text-sm text-gray-600">Warehouse Space</p>
-                    <p className="text-lg font-bold text-navy-800">2M+ sq ft</p>
+                    <p className="text-lg font-bold text-gray-800">2M+ sq ft</p>
                   </div>
                 </div>
               </div>
@@ -197,7 +197,7 @@ export default function WarehousingPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="order-2 lg:order-1 relative">
               <Image
-                src="/warehouse-facilities.png"
+                src="/warehouse-facilities.jpg"
                 alt="Warehouse Facilities"
                 width={600}
                 height={450}
@@ -409,7 +409,7 @@ export default function WarehousingPage() {
             </div>
             <div className="relative">
               <Image
-                src="/ecommerce-integration.png"
+                src="/ecommerce-integration.jpg"
                 alt="E-commerce Integration"
                 width={600}
                 height={450}
@@ -421,7 +421,7 @@ export default function WarehousingPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-navy-800 to-navy-900 text-white">
+      <section className="py-20 bg-gradient-to-r from-gray-800 to-gray-900 text-white">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -472,16 +472,16 @@ export default function WarehousingPage() {
                   </div>
                   <div>
                     <select className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white focus:outline-none focus:ring-2 focus:ring-teal-500">
-                      <option value="" className="bg-navy-800">
+                      <option value="" className="bg-gray-800">
                         Select Service
                       </option>
-                      <option value="storage" className="bg-navy-800">
+                      <option value="storage" className="bg-gray-800">
                         Warehouse Storage
                       </option>
-                      <option value="fulfillment" className="bg-navy-800">
+                      <option value="fulfillment" className="bg-gray-800">
                         Order Fulfillment
                       </option>
-                      <option value="inventory" className="bg-navy-800">
+                      <option value="inventory" className="bg-gray-800">
                         Inventory Management
                       </option>
                     </select>

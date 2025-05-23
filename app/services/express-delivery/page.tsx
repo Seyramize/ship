@@ -22,10 +22,10 @@ export default function ExpressDeliveryPage() {
                   Express Delivery Services
                 </p>
               </div>
-              <h1 className="text-4xl md:text-5xl font-bold leading-tight">
+              <h1 className="text-4xl md:text-5xl font-bold leading-tight text-teal-600">
                 When <span className="text-teal-400">Time Matters</span> Most
               </h1>
-              <p className="text-lg text-white/80 max-w-lg">
+              <p className="text-lg text-gray-600 max-w-lg">
                 Our express delivery services provide guaranteed, time-definite shipping solutions for your most urgent
                 and time-sensitive shipments.
               </p>
@@ -39,7 +39,7 @@ export default function ExpressDeliveryPage() {
                 </Link>
                 <Link
                   href="/contact"
-                  className="px-6 py-3 bg-white/10 hover:bg-white/20 text-white font-medium rounded-full border border-white/30 transition-all"
+                  className="px-6 py-3 bg-teal-500 hover:bg-teal-600 text-white font-medium rounded-full border border-white/30 transition-all"
                 >
                   Contact Sales
                 </Link>
@@ -47,7 +47,7 @@ export default function ExpressDeliveryPage() {
             </div>
             <div className="relative">
               <Image
-                src="/express-delivery-hero.png"
+                src="/express-delivery-hero.jpg"
                 alt="Express Delivery"
                 width={600}
                 height={400}
@@ -60,7 +60,7 @@ export default function ExpressDeliveryPage() {
                   </div>
                   <div>
                     <p className="text-sm text-gray-600">Fastest Delivery</p>
-                    <p className="text-lg font-bold text-navy-800">Same Day Available</p>
+                    <p className="text-lg font-bold text-gray-800">Same Day Available</p>
                   </div>
                 </div>
               </div>
@@ -235,7 +235,7 @@ export default function ExpressDeliveryPage() {
             </div>
             <div className="relative">
               <Image
-                src="/express-coverage-map.png"
+                src="/express-coverage-map.jpg"
                 alt="Express Delivery Coverage Map"
                 width={600}
                 height={450}
@@ -339,7 +339,7 @@ export default function ExpressDeliveryPage() {
             {/* Use Case 1 */}
             <div className="bg-white rounded-xl shadow-md overflow-hidden">
               <div className="h-48 bg-navy-800 relative">
-                <Image src="/medical-supplies.png" alt="Medical Supplies" fill className="object-cover opacity-70" />
+                <Image src="/medical-supplies.jpg" alt="Medical Supplies" fill className="object-cover opacity-70" />
                 <div className="absolute inset-0 flex items-center justify-center">
                   <h3 className="text-2xl font-bold text-white">Medical Supplies</h3>
                 </div>
@@ -355,7 +355,7 @@ export default function ExpressDeliveryPage() {
             <div className="bg-white rounded-xl shadow-md overflow-hidden">
               <div className="h-48 bg-navy-800 relative">
                 <Image
-                  src="/critical-documents.png"
+                  src="/critical-documents.jpg"
                   alt="Critical Documents"
                   fill
                   className="object-cover opacity-70"
@@ -374,7 +374,7 @@ export default function ExpressDeliveryPage() {
             {/* Use Case 3 */}
             <div className="bg-white rounded-xl shadow-md overflow-hidden">
               <div className="h-48 bg-navy-800 relative">
-                <Image src="/replacement-parts.png" alt="Replacement Parts" fill className="object-cover opacity-70" />
+                <Image src="/replacement-parts.jpg" alt="Replacement Parts" fill className="object-cover opacity-70" />
                 <div className="absolute inset-0 flex items-center justify-center">
                   <h3 className="text-2xl font-bold text-white">Replacement Parts</h3>
                 </div>
