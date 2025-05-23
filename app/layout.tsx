@@ -8,9 +8,9 @@ import Footer from "@/components/footer"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "ShipFast Logistics | Professional Shipping & Logistics Services",
+  title: "GlobalTide Express | Professional Shipping & Logistics Services",
   description:
-    "ShipFast provides reliable shipping, logistics, and freight services worldwide. Get a quote today and ship with confidence.",
+    "GlobalTide Express provides reliable shipping, logistics, and freight services worldwide. Get a quote today and ship with confidence.",
     generator: 'v0.dev'
 }
 
