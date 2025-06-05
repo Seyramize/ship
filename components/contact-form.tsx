@@ -31,16 +31,30 @@ export default function ContactForm() {
     setFormData((prev) => ({ ...prev, subject: value }))
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsLoading(true)
-
-    // Simulate API call
-    setTimeout(() => {
-      setIsLoading(false)
-      setIsSubmitted(true)
-    }, 1000)
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsLoading(true);
+    setError(null);
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+      if (res.ok) {
+        setIsSubmitted(true);
+      } else {
+        const data = await res.json();
+        setError(data.error || "Failed to send message. Please try again later.");
+      }
+    } catch (err: any) {
+      setError(err.message || "Failed to send message. Please try again later.");
+    } finally {
+      setIsLoading(false);
+    }
   }
+
+  const [error, setError] = useState<string | null>(null);
 
   if (isSubmitted) {
     return (
@@ -58,11 +72,11 @@ export default function ContactForm() {
           <Button onClick={() => setIsSubmitted(false)}>Send Another Message</Button>
         </CardContent>
       </Card>
-    )
+    );
   }
 
   return (
-    <Card>
+    <Card className="!bg-white !bg-opacity-100 dark:!bg-gray-900 dark:!bg-opacity-100 shadow-lg">
       <CardContent className="pt-6">
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="space-y-2">
@@ -90,7 +104,7 @@ export default function ContactForm() {
             />
           </div>
 
-          <div className="space-y-2">
+          <div className="space-y-2 bg-white dark:bg-gray-900">
             <Label htmlFor="subject">Subject</Label>
             <Select value={formData.subject} onValueChange={handleSelectChange} required>
               <SelectTrigger id="subject">
@@ -124,15 +138,17 @@ export default function ContactForm() {
             <Button type="submit" className="w-full relative" disabled={isLoading}>
               {isLoading ? "Sending..." : (
                 <>
-                  <span
-                    className="transition-colors duration-200 group-hover:text-secondary"
-                  >
+                  <span className="transition-colors duration-200 group-hover:text-secondary">
                     Send Message
                   </span>
                 </>
               )}
             </Button>
-           
+            {error && (
+              <div className="mt-3 p-3 bg-red-50 text-red-800 rounded text-center font-semibold border border-red-200">
+                {error}
+              </div>
+            )}
           </div>
         </form>
       </CardContent>

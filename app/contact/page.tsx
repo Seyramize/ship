@@ -5,9 +5,9 @@ import MapLocation from "@/components/map-location"
 import PageHeader from "@/components/page-header"
 
 export const metadata: Metadata = {
-  title: "Contact Us - ShipFast Logistics",
+  title: "Contact Us - GlobalTide Express",
   description:
-    "Get in touch with ShipFast Logistics. Contact our team for inquiries, support, or to learn more about our shipping and logistics services.",
+    "Get in touch with GlobalTide Express. Contact our team for inquiries, support, or to learn more about our shipping and logistics services.",
 }
 
 export default function ContactPage() {

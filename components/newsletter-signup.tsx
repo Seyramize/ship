@@ -12,7 +12,7 @@ export default function NewsletterSignup() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [result, setResult] = useState<{ success: boolean; message: string } | null>(null)
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
 
     // Basic email validation
@@ -28,20 +28,42 @@ export default function NewsletterSignup() {
     setIsSubmitting(true)
     setResult(null)
 
-    // Simulate API call with timeout
-    setTimeout(() => {
-      setIsSubmitting(false)
-      setResult({
-        success: true,
-        message: "Thank you for subscribing to our newsletter!",
-      })
-      setEmail("")
+    try {
+      const response = await fetch('/api/newsletter', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email }),
+      });
 
-      // Clear success message after 5 seconds
-      setTimeout(() => {
-        setResult(null)
-      }, 5000)
-    }, 1000)
+      const data = await response.json();
+      
+      if (response.ok) {
+        setResult({
+          success: true,
+          message: "Thank you for subscribing to our newsletter!",
+        });
+        setEmail("");
+        
+        // Clear success message after 5 seconds
+        setTimeout(() => {
+          setResult(null);
+        }, 5000);
+      } else {
+        setResult({
+          success: false,
+          message: data.message || "Failed to subscribe. Please try again.",
+        });
+      }
+    } catch (error) {
+      setResult({
+        success: false,
+        message: "An error occurred. Please try again.",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   }
 
   return (
