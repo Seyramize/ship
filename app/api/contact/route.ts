@@ -1,7 +1,18 @@
 import { NextRequest, NextResponse } from "next/server";
 
-// Update this to your business email
-const BUSINESS_EMAIL = "info@globaltideexpress.com";
+// Email configuration that works in both development and production
+const emailConfig = {
+  host: process.env.SMTP_HOST || "s3559.usc1.stableserver.net",
+  port: Number(process.env.SMTP_PORT) || 465,
+  secure: true, // use SSL
+  auth: {
+    user: process.env.BUSINESS_EMAIL || "info@globaltideexpress.com",
+    pass: process.env.EMAIL_PASSWORD || "@Qwerty7890",
+  },
+  tls: {
+    rejectUnauthorized: false
+  }
+};
 
 export async function POST(req: NextRequest) {
   const { name, email, subject, message } = await req.json();
@@ -14,25 +25,14 @@ export async function POST(req: NextRequest) {
     Message: ${message}
   `;
 
-  // Use Node.js built-in 'nodemailer' for sending emails (works in Node.js environments)
-  // On cPanel, you can use SMTP settings provided by your host
+  // Create transporter with config
   const nodemailer = require("nodemailer");
-
-  // Replace with your cPanel SMTP credentials
-  const transporter = nodemailer.createTransport({
-    host: "s3559.usc1.stableserver.net", // or your cPanel SMTP server
-    port: 465, // or 587 for TLS
-    secure: true, // true for 465, false for 587
-    auth: {
-      user: BUSINESS_EMAIL, // your business email
-      pass: "@Qwerty7890" // your email password
-    }
-  });
+  const transporter = nodemailer.createTransport(emailConfig);
 
   try {
     await transporter.sendMail({
-      from: `Website Contact <${BUSINESS_EMAIL}>`,
-      to: BUSINESS_EMAIL,
+      from: `Website Contact <${emailConfig.auth.user}>`,
+      to: emailConfig.auth.user,
       subject: `Contact Form: ${subject}`,
       text: mailText,
       replyTo: email
@@ -40,6 +40,7 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ success: true });
   } catch (error) {
     const errorMessage = error instanceof Error ? error.message : String(error);
+    console.error("Email error:", errorMessage);
     return NextResponse.json({ success: false, error: errorMessage }, { status: 500 });
   }
 }

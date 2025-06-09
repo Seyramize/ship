@@ -135,13 +135,24 @@ export default function QuoteForm() {
   async function onSubmit(data: FormValues) {
     setFormError(null)
     try {
-      // Simulate API call
-      await new Promise((resolve) => setTimeout(resolve, 1500))
-      console.log("Form submitted successfully:", data)
-      setIsSubmitted(true)
-    } catch (error) {
+      const res = await fetch("/api/quote", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      })
+
+      const responseData = await res.json()
+      
+      if (res.ok) {
+        setIsSubmitted(true)
+      } else {
+        throw new Error(responseData.error || "Failed to submit quote request")
+      }
+    } catch (error: any) {
       console.error("Error submitting form:", error)
-      setFormError("There was an error submitting your quote request. Please try again.")
+      setFormError(error.message || "There was an error submitting your quote request. Please try again.")
     }
   }
 
