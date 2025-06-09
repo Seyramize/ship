@@ -107,10 +107,10 @@ export default function ContactForm() {
           <div className="space-y-2 bg-white dark:bg-gray-900">
             <Label htmlFor="subject">Subject</Label>
             <Select value={formData.subject} onValueChange={handleSelectChange} required>
-              <SelectTrigger id="subject">
+              <SelectTrigger id="subject" className="bg-white dark:bg-gray-950 border border-input">
                 <SelectValue placeholder="Select a subject" />
               </SelectTrigger>
-              <SelectContent>
+              <SelectContent className="bg-white dark:bg-gray-950">
                 <SelectItem value="general">General Inquiry</SelectItem>
                 <SelectItem value="quote">Quote Request</SelectItem>
                 <SelectItem value="support">Customer Support</SelectItem>

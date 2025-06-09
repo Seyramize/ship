@@ -332,11 +332,11 @@ export default function QuoteForm() {
                         defaultValue={field.value}
                       >
                         <FormControl>
-                          <SelectTrigger>
+                          <SelectTrigger className="bg-white dark:bg-gray-950 border border-input">
                             <SelectValue placeholder="Select item type" />
                           </SelectTrigger>
                         </FormControl>
-                        <SelectContent>
+                        <SelectContent className="bg-white dark:bg-gray-950">
                           <SelectItem value="documents">Documents</SelectItem>
                           <SelectItem value="parcel">Parcel</SelectItem>
                           <SelectItem value="fragile">Fragile Items</SelectItem>
