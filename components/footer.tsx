@@ -58,7 +58,7 @@ export default function Footer() {
                   <p className="font-medium">+1 (555) 123-4567</p>
                 </div>
               </div> */}
-              <div className="flex items-center gap-3">
+              {/* <div className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center">
                   <Mail className="h-5 w-5 text-secondary" />
                 </div>
@@ -66,7 +66,7 @@ export default function Footer() {
                   <p className="text-sm text-white/60">Email us</p>
                   <p className="font-medium">info@globaltideexpress.com</p>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
 

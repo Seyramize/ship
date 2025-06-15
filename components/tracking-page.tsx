@@ -238,8 +238,8 @@ export default function TrackingPage() {
           <p className="text-muted-foreground">
             You can find your tracking number in your email after payment has been processed.
           </p>
-          <div className="mt-4 p-4 bg-gray-50 dark:bg-gray-800 rounded-md">
-            <p className="text-sm font-medium mb-2">Try these demo tracking numbers:</p>
+          {/* <div className="mt-4 p-4 bg-gray-50 dark:bg-gray-800 rounded-md">
+            <p className="text-sm font-medium mb-2">Try these demo tracking numbers:</p> */}
             {/* <div className="flex flex-col sm:flex-row gap-2 justify-center">
               <Button
                 variant="outline"
@@ -262,7 +262,7 @@ export default function TrackingPage() {
                 SF9876543210
               </Button>
             </div> */}
-          </div>
+          {/* </div> */}
         </Card>
       )}
     </div>
