@@ -95,7 +95,7 @@ export default function TrackingPage() {
             <div className="flex-1">
               <Input
                 type="text"
-                placeholder="Enter tracking number (try SF1234567890 or SF9876543210)"
+                placeholder="Enter tracking number"
                 value={trackingNumber}
                 onChange={(e) => setTrackingNumber(e.target.value)}
                 className="w-full"
@@ -234,13 +234,13 @@ export default function TrackingPage() {
       {!trackingData && !isLoading && !activeTrackingNumber && (
         <Card className="p-8 text-center">
           <Package className="h-16 w-16 mx-auto mb-4 text-muted-foreground" />
-          <p className="text-lg mb-2">Enter a tracking number to get started</p>
+          <p className="text-lg mb-2">Enter your tracking number to get started</p>
           <p className="text-muted-foreground">
-            You can find your tracking number in your shipping confirmation email.
+            You can find your tracking number in your email after payment has been processed.
           </p>
           <div className="mt-4 p-4 bg-gray-50 dark:bg-gray-800 rounded-md">
             <p className="text-sm font-medium mb-2">Try these demo tracking numbers:</p>
-            <div className="flex flex-col sm:flex-row gap-2 justify-center">
+            {/* <div className="flex flex-col sm:flex-row gap-2 justify-center">
               <Button
                 variant="outline"
                 size="sm"
@@ -261,7 +261,7 @@ export default function TrackingPage() {
               >
                 SF9876543210
               </Button>
-            </div>
+            </div> */}
           </div>
         </Card>
       )}

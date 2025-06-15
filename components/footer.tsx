@@ -49,7 +49,7 @@ export default function Footer() {
               Your trusted partner for all shipping and logistics needs. Delivering excellence worldwide since 2005.
             </p>
             <div className="space-y-3">
-              <div className="flex items-center gap-3">
+              {/* <div className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center">
                   <Phone className="h-5 w-5 text-secondary" />
                 </div>
@@ -57,7 +57,7 @@ export default function Footer() {
                   <p className="text-sm text-white/60">Call us 24/7</p>
                   <p className="font-medium">+1 (555) 123-4567</p>
                 </div>
-              </div>
+              </div> */}
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center">
                   <Mail className="h-5 w-5 text-secondary" />
@@ -184,15 +184,14 @@ export default function Footer() {
           <div>
             <h3 className="text-xl font-bold mb-6">Contact Information</h3>
             <div className="space-y-4">
-              <div className="flex items-start gap-3">
-                <MapPin className="h-5 w-5 text-secondary mt-1" />
-                <p className="text-white/70">
-                  123 Logistics Way
-                  <br />
-                  Shipping City, SC 12345
-                  <br />
-                  United States
-                </p>
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center">
+                  <Mail className="h-5 w-5 text-secondary" />
+                </div>
+                <div>
+                  <p className="text-sm text-white/60">Email us</p>
+                  <p className="font-medium">info@globaltideexpress.com</p>
+                </div>
               </div>
               <div className="flex items-start gap-3">
                 <Clock className="h-5 w-5 text-secondary mt-1" />

@@ -85,7 +85,7 @@ export default function Home() {
                   href="/quote"
                   className="px-8 py-4 bg-secondary hover:bg-secondary-light text-white font-medium rounded-full transition-all flex items-center gap-2 hover-lift"
                 >
-                  Get a Free Quote
+                  Get a Quote
                   <ArrowRight className="h-5 w-5" />
                 </Link>
 
