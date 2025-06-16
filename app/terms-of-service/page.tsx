@@ -130,9 +130,9 @@ export default function TermsOfServicePage() {
               <p className="mt-2">
                 <strong>Email:</strong> legal@globaltideexpress.com
                 <br />
-                <strong>Address:</strong> 123 Logistics Way, Shipping City, SC 12345
+                {/* <strong>Address:</strong> 123 Logistics Way, Shipping City, SC 12345
                 <br />
-                <strong>Phone:</strong> +1 (555) 123-4567
+                <strong>Phone:</strong> +1 (555) 123-4567 */}
               </p>
             </section>
           </div>

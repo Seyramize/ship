@@ -166,10 +166,10 @@ export default function ReturnsPolicyPage() {
                 For questions about our returns policy or to file a claim, please contact our customer service team:
               </p>
               <p className="mt-2">
-                <strong>Email:</strong> claims@globaltideexpress.com
+                <strong>Email:</strong> info@globaltideexpress.com
                 <br />
-                <strong>Phone:</strong> +1 (555) 987-6543
-                <br />
+                {/* <strong>Phone:</strong> +1 (555) 987-6543
+                <br /> */}
                 <strong>Hours:</strong> Monday-Friday, 8:00 AM - 6:00 PM; Saturday, 9:00 AM - 1:00 PM
               </p>
             </section>

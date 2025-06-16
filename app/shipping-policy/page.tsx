@@ -171,10 +171,10 @@ export default function ShippingPolicyPage() {
                 If you have questions about our shipping policy or need assistance with a shipment, please contact us:
               </p>
               <p className="mt-2">
-                <strong>Email:</strong> shipping@globaltideexpress.com
+                <strong>Email:</strong> info@globaltideexpress.com
                 <br />
-                <strong>Phone:</strong> +1 (555) 123-4567
-                <br />
+                {/* <strong>Phone:</strong> +1 (555) 123-4567
+                <br /> */}
                 <strong>Hours:</strong> Monday-Friday, 8:00 AM - 6:00 PM; Saturday, 9:00 AM - 1:00 PM
               </p>
             </section>
