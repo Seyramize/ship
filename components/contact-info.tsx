@@ -17,7 +17,7 @@ export default function ContactInfo() {
             </div>
           </div>
 
-          <div className="flex items-start gap-3">
+          {/* <div className="flex items-start gap-3">
             <Phone className="h-5 w-5 text-primary mt-0.5" />
             <div>
               <p className="font-medium">Phone</p>
@@ -36,7 +36,7 @@ export default function ContactInfo() {
               <p>Shipping City, SC 12345</p>
               <p>United States</p>
             </div>
-          </div>
+          </div> */}
 
           <div className="flex items-start gap-3">
             <Clock className="h-5 w-5 text-primary mt-0.5" />
