@@ -45,36 +45,31 @@ const shipments = new Map([
     {
       trackingNumber: "SF3438872900",
       status: "In Transit",
-      estimatedDelivery: "2023-09-28",
+      estimatedDelivery: "2024-07-28",
       origin: "Accra, Ghana",
       destination: "Darthmouth, Canada",
-      currentLocation: "Accra, Ghana",
+      currentLocation: "London, UK",
       lastUpdated: new Date().toISOString(),
       history: [
         {
-          date: "2025-07-29T08:30:00",
+          date: "2024-07-19T08:30:00",
           location: "Accra, Ghana",
           status: "Package received",
           icon: "Package",
         },
         {
-          date: "2025-07-30T10:15:00",
+          date: "2024-07-20T10:15:00",
           location: "Accra, Ghana",
-          status: "Package processed",
-          icon: "Package",
-        },
-        {
-          date: "2025-07-31T07:45:00",
-          location: "Accra, Ghana",
-          status: "In transit",
+          status: "Departed from origin country",
           icon: "Plane",
         },
         {
-          date: "2025-08-01T14:20:00",
-          location: "Accra, Ghana",
+          date: "2024-07-21T07:45:00",
+          location: "London, UK",
           status: "In transit",
-          icon: "Truck",
+          icon: "Plane",
         },
+        
       ],
     },
   ],
@@ -125,7 +120,7 @@ const shipments = new Map([
 ])
 
 // Possible status updates for simulation
-const possibleUpdates = [
+const possibleUpdatesDomesticLong = [
   {
     status: "In Transit",
     locations: ["Phoenix, AZ", "Las Vegas, NV", "San Bernardino, CA"],
@@ -148,6 +143,52 @@ const possibleUpdates = [
   },
 ]
 
+const possibleUpdatesInternational = [
+  {
+    status: "In Transit",
+    locations: ["Halifax, NS", "Dartmouth, NS"],
+    icon: "Truck",
+  },
+  {
+    status: "Arrived at Facility",
+    locations: ["Dartmouth, NS"],
+    icon: "Warehouse",
+  },
+  {
+    status: "Out for Delivery",
+    locations: ["Dartmouth, NS"],
+    icon: "Truck",
+  },
+  {
+    status: "Delivered",
+    locations: ["Dartmouth, NS"],
+    icon: "CheckCircle",
+  },
+]
+
+const possibleUpdatesDomesticShort = [
+  {
+    status: "In Transit",
+    locations: ["Savannah, GA"],
+    icon: "Truck",
+  },
+  {
+    status: "Arrived at Facility",
+    locations: ["Atlanta, GA"],
+    icon: "Warehouse",
+  },
+  {
+    status: "Out for Delivery",
+    locations: ["Atlanta, GA"],
+    icon: "Truck",
+  },
+  {
+    status: "Delivered",
+    locations: ["Atlanta, GA"],
+    icon: "CheckCircle",
+  },
+]
+
 export async function GET(request: NextRequest, { params }: { params: { id: string } }) {
   const trackingId = params.id
 
@@ -160,6 +201,21 @@ export async function GET(request: NextRequest, { params }: { params: { id: stri
   const encoder = new TextEncoder()
   const customReadable = new ReadableStream({
     start(controller) {
+      let possibleUpdates
+      switch (trackingId) {
+        case "SF1234567890":
+          possibleUpdates = possibleUpdatesDomesticLong
+          break
+        case "SF3438872900":
+          possibleUpdates = possibleUpdatesInternational
+          break
+        case "SF9876543210":
+          possibleUpdates = possibleUpdatesDomesticShort
+          break
+        default:
+          possibleUpdates = possibleUpdatesDomesticLong
+      }
+
       // Send initial data
       const shipment = shipments.get(trackingId)
       controller.enqueue(encoder.encode(`data: ${JSON.stringify(shipment)}\n\n`))
