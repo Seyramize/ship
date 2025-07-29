@@ -52,23 +52,18 @@ const shipments = new Map([
       lastUpdated: new Date().toISOString(),
       history: [
         {
-          date: "2024-07-19T08:30:00",
+          date: "2025-07-28T08:30:00",
           location: "Accra, Ghana",
           status: "Package received",
           icon: "Package",
         },
         {
-          date: "2024-07-20T10:15:00",
+          date: "2025-07-29T10:15:00",
           location: "Accra, Ghana",
           status: "Departed from origin country",
           icon: "Plane",
         },
-        {
-          date: "2024-07-21T07:45:00",
-          location: "London, UK",
-          status: "In transit",
-          icon: "Plane",
-        },
+       
         
       ],
     },
@@ -232,45 +227,49 @@ export async function GET(request: NextRequest, { params }: { params: { id: stri
           return
         }
 
-        // Randomly decide if we should update (30% chance)
-        if (Math.random() < 0.3) {
-          // Choose a random update
-          const updateIndex = Math.floor(Math.random() * possibleUpdates.length)
-          const update = possibleUpdates[updateIndex]
+        const currentStatusIndex = possibleUpdates.findIndex(p => p.status === shipment.status)
 
-          // Choose a random location from the update
-          const locationIndex = Math.floor(Math.random() * update.locations.length)
-          const location = update.locations[locationIndex]
-
-          // Create a new history entry
-          const newEntry = {
-            date: new Date().toISOString(),
-            location,
-            status: update.status,
-            icon: update.icon,
-          }
-
-          // Update the shipment
-          shipment.history.push(newEntry)
-          shipment.status = update.status
-          shipment.currentLocation = location
-          shipment.lastUpdated = new Date().toISOString()
-
-          // If delivered, update estimated delivery to now
-          if (update.status === "Delivered") {
-            shipment.estimatedDelivery = new Date().toISOString()
-          }
-
-          // Update the shipment in the map
-          shipments.set(trackingId, shipment)
+        // If no further updates are available, do nothing
+        if (currentStatusIndex === -1 || currentStatusIndex >= possibleUpdates.length - 1) {
+          controller.enqueue(encoder.encode(`data: ${JSON.stringify(shipment)}\n\n`))
+          return
         }
+
+        // Get the next sequential update
+        const update = possibleUpdates[currentStatusIndex + 1]
+
+        // Choose a random location from the update
+        const locationIndex = Math.floor(Math.random() * update.locations.length)
+        const location = update.locations[locationIndex]
+
+        // Create a new history entry
+        const newEntry = {
+          date: new Date().toISOString(),
+          location,
+          status: update.status,
+          icon: update.icon,
+        }
+
+        // Update the shipment
+        shipment.history.push(newEntry)
+        shipment.status = update.status
+        shipment.currentLocation = location
+        shipment.lastUpdated = new Date().toISOString()
+
+        // If delivered, update estimated delivery to now
+        if (update.status === "Delivered") {
+          shipment.estimatedDelivery = new Date().toISOString()
+        }
+
+        // Update the shipment in the map
+        shipments.set(trackingId, shipment)
 
         // Send the updated shipment
         controller.enqueue(encoder.encode(`data: ${JSON.stringify(shipment)}\n\n`))
       }
 
-      // Send updates every 5 seconds
-      const interval = setInterval(sendUpdate, 5000)
+      // Send updates every 10 hours
+      const interval = setInterval(sendUpdate, 36000000)
 
       // Clean up on close
       request.signal.addEventListener("abort", () => {
