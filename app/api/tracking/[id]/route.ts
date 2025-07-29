@@ -48,7 +48,7 @@ const shipments = new Map([
       estimatedDelivery: "2024-07-28",
       origin: "Accra, Ghana",
       destination: "Darthmouth, Canada",
-      currentLocation: "London, UK",
+      currentLocation: "Accra, Ghana",
       lastUpdated: new Date().toISOString(),
       history: [
         {
