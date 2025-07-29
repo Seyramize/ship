@@ -41,6 +41,44 @@ const shipments = new Map([
     },
   ],
   [
+    "SF3438872900",
+    {
+      trackingNumber: "SF3438872900",
+      status: "In Transit",
+      estimatedDelivery: "2023-09-28",
+      origin: "Accra, Ghana",
+      destination: "Darthmouth, Canada",
+      currentLocation: "Accra, Ghana",
+      lastUpdated: new Date().toISOString(),
+      history: [
+        {
+          date: "2025-07-29T08:30:00",
+          location: "Accra, Ghana",
+          status: "Package received",
+          icon: "Package",
+        },
+        {
+          date: "2025-07-30T10:15:00",
+          location: "Accra, Ghana",
+          status: "Package processed",
+          icon: "Package",
+        },
+        {
+          date: "2025-07-31T07:45:00",
+          location: "Accra, Ghana",
+          status: "In transit",
+          icon: "Plane",
+        },
+        {
+          date: "2025-08-01T14:20:00",
+          location: "Accra, Ghana",
+          status: "In transit",
+          icon: "Truck",
+        },
+      ],
+    },
+  ],
+  [
     "SF9876543210",
     {
       trackingNumber: "SF9876543210",
