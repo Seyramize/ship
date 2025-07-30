@@ -64,7 +64,7 @@ const shipments = new Map([
           icon: "Plane",
         },
         {
-          date: "2025-07-29T10:15:00",
+          date: "2025-07-30T10:15:00",
           location: "Instabul, Turkey",
           status: "In transit",
           icon: "Plane",
