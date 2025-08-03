@@ -48,7 +48,7 @@ const shipments = new Map([
       estimatedDelivery: "2025-08-05",
       origin: "Accra, Ghana",
       destination: "Darthmouth, Canada",
-      currentLocation: "Instabul, Turkey",
+      currentLocation: "London, UK",
       lastUpdated: new Date().toISOString(),
       history: [
         {
@@ -66,6 +66,12 @@ const shipments = new Map([
         {
           date: "2025-07-30T12:00:00",
           location: "Instabul, Turkey",
+          status: "In transit",
+          icon: "Plane",
+        },
+        {
+          date: "2025-08-03T11:00:00",
+          location: "London, UK",
           status: "In transit",
           icon: "Plane",
         },
