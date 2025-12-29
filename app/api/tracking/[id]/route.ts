@@ -83,7 +83,7 @@ const shipments = new Map([
   [
     "SF5538865900",
     {
-      trackingNumber: "SF553886900",
+      trackingNumber: "SF5538865900",
       status: "In Transit",
       estimatedDelivery: "2026-01-02",
       origin: "Accra, Ghana",
@@ -236,8 +236,9 @@ const possibleUpdatesDomesticShort = [
   },
 ]
 
-export async function GET(request: NextRequest, { params }: { params: { id: string } }) {
-  const trackingId = params.id
+export async function GET(request: NextRequest, { params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params
+  const trackingId = id
 
   // Check if the tracking ID exists
   if (!shipments.has(trackingId)) {
