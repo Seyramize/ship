@@ -84,31 +84,31 @@ const shipments = new Map([
     "SF5538865900",
     {
       trackingNumber: "SF5538865900",
-      status: "In Transit",
+      status: "Detained by US Customs",
       estimatedDelivery: "2026-01-02",
       origin: "Accra, Ghana",
       destination: "Decatur (IL), USA",
-      currentLocation: "Accra, Ghana",
+      currentLocation: "Decatur (IL), USA",
       lastUpdated: new Date().toISOString(),
       history: [
         {
-          date: "2026-01-01T15:30:00",
+          date: "2025-12-28T15:30:00",
           location: "Accra, Ghana",
           status: "Package received",
           icon: "Package",
         },
-        // {
-        //   date: "2026-01-02T10:15:00",
-        //   location: "Accra, Ghana",
-        //   status: "Departed from origin country",
-        //   icon: "Plane",
-        // },
-        // {
-        //   date: "2026-01-03T12:00:00",
-        //   location: "Decatur (IL), USA",
-        //   status: "In transit",
-        //   icon: "Plane",
-        // },
+        {
+          date: "2025-12-30T10:15:00",
+          location: "Accra, Ghana",
+          status: "Departed from origin country",
+          icon: "Plane",
+        },
+        {
+          date: "2026-01-02T10:00:00",
+          location: "Decatur (IL), USA",
+          status: "Arrived in US - Detained by US Customs",
+          icon: "AlertCircle",
+        },
         // {
         //   date: "2026-01-04T11:00:00",
         //   location: "Decatur (IL), USA",
